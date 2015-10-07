@@ -9,22 +9,20 @@ Libraries and Frameworks: jQuery, Angular, Bootstrap
 Plugins: GoogleMap, Google Fonts
 
 ##Description:
-The navigation is inspired by a Bootstrap template. It has only two active...
-(Logo - used also as a Home page, and Contact Us).
+The navigation is inspired by a Bootstrap template. It has only two active menu items (Logo - used also as a Home page, and Contact Us).
 
 The Home page is designed as follows:
-	A carousel (with navigation ...) is used as a fullscreen background.
+	A carousel (with right and left navigation items) is used as a fullscreen background.
 Each image (of the three) is used as a board on which an upcoming event is
 displayed. An event has a title and short description. Below the text there is
-a clickable botton that opens an event's application form. The application form
+a clickable button that opens an event's application form. The application form
 is within a modal. The modal is divided by two (grid system used): on the right
 side is the app form, and on the left side -  an embedded YouTube video. The
 application form has: input fields, radio buttons, check boxes, textarea. Two
-buttons - "Submit" and "Close" are used respectively to to sibmite the form as
-the form validation is shown..., and to close the window.
-	Below the ..button there is information about the event's time and
-place with a link to the location of the venue office (a Google map showing
-up).
+buttons - "Submit" and "Close" are used respectively to to submit the form as
+the form validation is shown in the console, and to close the window.
+	There is information about the event's time and place with a link to the location
+of the venue office (a Google map showing up), below the "Join Us" button t.
 
 The Contact Us page is designed as follows:
 	A bootstrap panel with information about designer's name, email address
