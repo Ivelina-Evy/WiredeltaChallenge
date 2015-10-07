@@ -1,0 +1,85 @@
+<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" ng-controller="HomeCtrl">
+    <div class="carousel-inner container" role="listbox">
+            <div class="item active row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="title">
+                        <h1>International Careers and Volunteering</h1>
+                        <p>Your skills, experience and knowledge matter! Come and lend us support to provide better education
+                            to orphans in rural Uganda.</p>
+                        <ng-include src="'../app/partial/modal/modal.html'"></ng-include>
+                        <p>Sunday &#124 10am-4pm &#124 <span ng-click="toggleMap1()">Gyldenl&oslashvesgade 11, 1600 Copenhagen V</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+
+                <div class="row">
+                <div class="map1" style="display: none;">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <div id="googleMap1" style="width:520px;height:300px;"></div>
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+                </div>
+            </div>
+
+            <div class="item row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="title">
+                        <h1>Team Volunteering</h1>
+                        <p>It's a massive mud event that requires a dedicated team of incredible volunteers that have a passion
+                            for a great big day out, fun and new experiences.</p>
+                        <ng-include src="'../app/partial/modal/modal.html'"></ng-include>
+                        <p>Sunday &#124 10am-4pm &#124 <span ng-click="toggleMap2()">Gyldenl&oslashvesgade 11, 1600 Copenhagen V</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+                <div class="row">
+                <div class="map2" style="display: none;">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <div id="googleMap2" style="width:520px;height:300px;"></div>
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+                </div>
+            </div>
+            <div class="item row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="title">
+                        <h1>Public Health Volunteer Abroad</h1>
+                        <p>We need public health volunteers to provide health education to schools, orphanages and other target communities in Zimbabwe.
+                            In this project you will focus on a variety of areas, including sexual and reproductive health, HIV/AIDS,
+                            Malaria, Nutrition, dental health and other communicable diseases..</p>
+                        <ng-include src="'../app/partial/modal/modal.html'"></ng-include>
+                        <p>Sunday &#124 10am-4pm &#124 <span ng-click="toggleMap3()">Gyldenl&oslashvesgade 11, 1600 Copenhagen V</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+                <div class="row">
+                <div class="map3" style="display: none;">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <div id="googleMap3" style="width:520px;height:300px;"></div>
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+                </div>
+            </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" ng-non-bindable data-slide="prev" target="_self">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#myCarousel" role="button" ng-non-bindable data-slide="next" target="_self">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+

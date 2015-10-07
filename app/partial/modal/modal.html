@@ -1,0 +1,107 @@
+<div ng-controller="ModalDemoCtrl">
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header"></div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p>Watch the video below to learn how to fill in the form and prepare for the upcoming event.</p>
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <form name="form">
+                            <h1>Application Form</h1>
+                            <p style="font-style: italic;">Your personal data is protected in accordance with the international data protection legal framework.</p>
+
+                            <div class="control-group" ng-class="{true: 'error'}[submitted && form.firstname.$invalid]">
+                                <div class="controls">
+                                    <input type="text" placeholder="First Name" name="firstname" ng-model="formData.firstname" required class="form-control"  />
+                                    <span class="help-inline" ng-show="submitted && form.firstname.$error.required">Required</span>
+                                </div>
+                            </div>
+
+                            <div class="control-group" ng-class="{true: 'error'}[submitted && form.lastname.$invalid]">
+                                <div class="controls">
+                                    <input type="text" placeholder="Last Name" name="lastname" ng-model="formData.lastname" required class="form-control"  />
+                                    <span class="help-inline" ng-show="submitted && form.lastname.$error.required">Required</span>
+                                </div>
+                            </div>
+
+                            <div class="control-group" ng-class="{true: 'error'}[submitted && form.gender.$invalid]">
+                                <div class="controls">
+                                    <label for="gender">Gender:</label>
+                                    <label class="radio-inline">
+                                        <input type="radio" ng-model="formData.gender" name="gender" value="red" ng-required="!gender">Male
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" ng-model="formData.gender" name="gender" value="green" ng-required="!gender">Female
+                                    </label>
+                                    </br>
+                                    <span class="help-inline" ng-show="submitted && form.gender.$error.required">Required</span>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="controls">
+                                    <label for="address">Address:</label>
+                                    <select class="form-control">
+                                        <option>Bulgaria</option>
+                                        <option>China</option>
+                                        <option>Denmark</option>
+                                        <option>UK</option>
+                                        <option>USA</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input class="form-control"  type="text" placeholder="City" name="city" ng-model="formData.city" required class="form-control"  />
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input class="form-control" type="text" placeholder="Street" name="street" ng-model="formData.street" required class="form-control"  />
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input class="form-control"  type="text" placeholder="Post code" name="post" ng-model="formData.post" required class="form-control"  />
+                                </div>
+                            </div>
+
+                            <div class="control-group" ng-class="{true: 'error'}[submitted && form.email.$invalid]">
+                                <div class="controls">
+                                    <input type="email" placeholder="Email" name="email" ng-model="formData.email" required class="form-control"  />
+                                    <span class="help-inline" ng-show="submitted && form.email.$error.required">Required</span>
+                                    <span class="help-inline" ng-show="submitted && form.email.$error.email">Invalid email</span>
+                                </div>
+                            </div>
+
+                            <div class="control-group" >
+                                <label for="skills">Skills:</label>
+                                <label class="checkbox-inline" ng-repeat="skill in skills">
+                                    <input type="checkbox" checklist-model="formData.skills" checklist-value="skill"> {{skill}}
+                                </label>
+                            </div>
+
+                            <div class="control-group">
+                                <label for="comments">Comments:</label>
+                                <textarea class="form-control"  placeholder="Comments" ng-model="formData.comment" rows="5" id="comment" ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large" ng-click="submitFormData()">Submit</button>
+                            <button type="button" class="btn btn-default"  ng-click="cancel()">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <button type="button" class="btn btn-default" ng-click="open('lg')">Join Now!</button>
+
+</div>
